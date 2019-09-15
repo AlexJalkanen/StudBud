@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1003311437294",
+    "firebase_url": "https://studbud-app.firebaseio.com",
+    "project_id": "studbud-app",
+    "storage_bucket": "studbud-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1003311437294:android:84b058b075dbac33",
+        "android_client_info": {
+          "package_name": "org.studbud.studbud"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1003311437294-kqphr6mg69557fekmtpqu9aqabha52rm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "org.studbud.studbud",
+            "certificate_hash": "47624573578cdf7b318c2167d8795fbf6c13102f"
+          }
+        },
+        {
+          "client_id": "1003311437294-fkr50ltvm1r2i77d7iigqp445ps9foa8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGeytisHIRp0e8DCfq47JBCC4no1r0Ev0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1003311437294-fkr50ltvm1r2i77d7iigqp445ps9foa8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Choose Image From Phone"
+        android:textSize="15sp"
+        android:textColor="#000000"
+        android:gravity="center_vertical"
+        android:id="@+id/dialogChoosePhoto"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#B3B3B3"
+        android:layout_below="@+id/dialogChoosePhoto"
+        android:id="@+id/divider"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Take Picture With Camera"
+        android:textSize="15sp"
+        android:textColor="#000000"
+        android:gravity="center_vertical"
+        android:id="@+id/dialogOpenCamera"
+        android:layout_below="@+id/divider"/>
+
+</RelativeLayout>

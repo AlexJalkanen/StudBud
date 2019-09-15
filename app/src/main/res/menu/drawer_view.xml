@@ -1,0 +1,34 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_find"
+            android:icon="@drawable/find"
+            android:title="Find a StudBud" />
+        <item
+            android:id="@+id/nav_friends"
+            android:icon="@drawable/friends"
+            android:title="Friends" />
+        <item
+            android:id="@+id/nav_message"
+            android:icon="@drawable/chat"
+            android:title="Direct Message" />
+        <item
+            android:id="@+id/nav_previous"
+            android:icon="@drawable/previous"
+            android:title="Previous Studies" />
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/profile"
+            android:title="Profile" />
+    </group>
+    <item
+        android:id="@+id/nav_signOut"
+        android:icon="@drawable/lock_solid"
+        android:title="Sign Out" />
+    <item
+        android:id="@+id/menu_none"
+        android:title=""
+        android:checkable="true"
+        android:visible="false"/>
+
+</menu>

@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@+id/scrollableContent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:context=".MainFeedFragment"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:scrollbars="none"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/loadingPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center" >
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:layout_marginTop="20dp"/>
+    </RelativeLayout>
+
+
+<!--Element 1 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/FirstLayout"
+        android:padding="10dp"
+        android:elevation="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:background="@drawable/feed_bg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:id="@+id/firstElement"
+            android:orientation="vertical"
+            android:elevation="20dp">
+
+
+
+            <TextView
+                android:id="@+id/pairText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-20dp"
+                android:ellipsize="marquee"
+                android:gravity="center"
+                android:padding="5dp"
+                android:singleLine="false"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/requestResult"
+                android:orientation="vertical"
+                android:gravity="left"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:visibility="gone">
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/cancelRequest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:ellipsize="marquee"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:text="Cancel this request?"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="bold|italic"
+                android:gravity="center"
+                android:visibility="gone"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="25dp">
+
+                <ImageView
+                    android:id="@+id/userImage"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    app:srcCompat="@drawable/user"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:visibility="gone"/>
+                <ImageView
+                    android:id="@+id/pairImage"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    app:srcCompat="@drawable/user"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/pairSubject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-20dp"
+                android:ellipsize="marquee"
+                android:gravity="center"
+                android:padding="5dp"
+                android:singleLine="false"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textSize="16sp"/>
+
+
+
+            <TextView
+                android:id="@+id/groupText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ellipsize="marquee"
+                android:gravity="center"
+                android:padding="5dp"
+                android:singleLine="false"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textSize="12sp"
+                android:textStyle="bold|italic" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!--Element 2 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/SecondLayout"
+        android:padding="10dp"
+        android:elevation="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:background="@drawable/feed_bg"
+        >
+
+        <LinearLayout
+            android:id="@+id/LayoutForPairs"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/layout_bg"
+            android:elevation="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginStart="-10dp"
+            android:layout_marginLeft="-10dp"
+            android:layout_marginRight="-10dp"
+            android:layout_marginEnd="-10dp">
+
+            <TextView
+                android:id="@+id/pairTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:ellipsize="marquee"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:text="All Available StudBud and StudGroups"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:id="@+id/endTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:ellipsize="marquee"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:text="Want to end your current studying session?"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="bold|italic" />
+
+            <Button
+                android:id="@+id/endButton"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_bg"
+                android:text="End Current Session"
+                android:textColor="@color/colorPrimary"
+                android:layout_gravity="center_horizontal"
+                android:textAllCaps="false"
+                android:layout_marginTop="20dp"/>
+
+
+
+
+
+            <ScrollView
+                android:id="@+id/pairsScrollableContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@drawable/layout_bg"
+                android:elevation="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginStart="-10dp"
+                android:layout_marginLeft="-10dp"
+                android:layout_marginRight="-10dp"
+                android:layout_marginEnd="-10dp"
+                >
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:id="@+id/Layout"
+                        android:orientation="vertical"
+                        android:elevation="10dp">
+
+                        <TextView
+                            android:id="@+id/sorry"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="30dp"
+                            android:ellipsize="marquee"
+                            android:padding="0dp"
+                            android:singleLine="false"
+                            android:text="Sorry, no StudBuds are currently available. \n Please make your own session."
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textStyle="bold|italic"
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="center"
+                            android:visibility="gone"/>
+
+                        <TextView
+                            android:id="@+id/loading"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="30dp"
+                            android:ellipsize="marquee"
+                            android:padding="0dp"
+                            android:singleLine="false"
+                            android:text="Loading Available StudBuds..."
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textStyle="bold|italic"
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="center"
+                            android:visibility="visible"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/dynamicResults"
+                            android:orientation="vertical"
+                            android:gravity="left"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp">
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+            </ScrollView>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+</LinearLayout>
+</ScrollView>

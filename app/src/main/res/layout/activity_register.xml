@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+tools:context=".Register">
+
+<LinearLayout
+    android:id="@+id/headerView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:orientation="horizontal"
+    android:padding="10dp"
+    android:background="@color/colorPrimary">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/back_arrow"
+            android:background="@android:color/transparent"
+            android:id="@+id/registrationBack"
+            android:paddingTop="6dp"
+            android:clickable="true"
+            android:focusable="true"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:paddingLeft="5dp"
+                android:paddingBottom="5dp"
+                android:singleLine="true"
+                android:text="Registration"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#ffffff"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:fontFamily="serif" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>
+
+<ScrollView
+    android:id="@+id/scrollableContent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/headerView"
+    android:layout_above="@+id/registrationContinue"
+    android:background="@drawable/background">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:id="@+id/mainLayout"
+            android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:id="@+id/NameText"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Name:"
+            android:textStyle="bold|italic"
+            android:padding="5dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/nameLayout"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/firstName"
+                    android:ems="10"
+                    android:hint="First Name:"
+                    android:inputType="textPersonName"
+                    android:background="#00000000"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textSize="21sp"/>
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lastName"
+                    android:ems="10"
+                    android:hint="Last Name:"
+                    android:inputType="textPersonName"
+                    android:background="#00000000"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textSize="21sp"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:id="@+id/EmailText"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Email:"
+                android:textStyle="bold|italic"
+                android:padding="5dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/emailReg"
+                android:ems="10"
+                android:hint="School Email Address:"
+                android:inputType="textEmailAddress"
+                android:background="#00000000"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textSize="21sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:id="@+id/PasswordText"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Password:"
+                android:textStyle="bold|italic"
+                android:padding="5dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/passwordReg"
+                android:ems="10"
+                android:hint="Password:"
+                android:inputType="textPassword"
+                android:background="#00000000"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textSize="21sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:id="@+id/cPasswordText"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Confirm password:"
+                android:textStyle="bold|italic"
+                android:padding="5dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cPasswordReg"
+                android:ems="10"
+                android:hint="Confirm Password:"
+                android:inputType="textPassword"
+                android:background="#00000000"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textSize="21sp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:id="@+id/pictureText"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Add a profile picture:"
+                android:textStyle="bold|italic"
+                android:padding="5dp"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/uploadPictureButton"
+                    android:text="Upload Picture:"
+                    android:gravity="start"
+                    android:textStyle="italic"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textSize="18dp"
+                    android:textAllCaps="false"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"/>
+
+                <ImageView
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:id="@+id/profilePicDisplay"
+                    app:srcCompat="@drawable/user"
+                    android:visibility="visible"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="50dp"
+                    android:layout_marginRight="50dp"
+                    />
+
+            </RelativeLayout>
+
+
+
+
+
+
+
+
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:id="@+id/registrationContinue"
+        android:text="Register"
+        android:textColor="#333333"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button"
+        android:textSize="18dp"
+        android:textAllCaps="false"
+        android:layout_alignParentBottom="true"
+        android:background="#1A000000"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".FindStudBudPairFragment"
+
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:background="#e0e0e0"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:clipToPadding="false"
+    android:clipChildren="false">
+
+    <LinearLayout
+        android:id="@+id/headerView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:background="@color/colorPrimary"
+        android:layout_marginTop="-11dp"
+        android:layout_marginStart="-11dp"
+        android:layout_marginEnd="-11dp"
+        android:layout_marginBottom="-11dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/back_arrow"
+                android:background="@android:color/transparent"
+                android:id="@+id/find_studBud_subject_back_button"
+                android:paddingTop="6dp"
+                android:clickable="true"
+                android:focusable="true"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:paddingLeft="5dp"
+                    android:paddingBottom="5dp"
+                    android:singleLine="true"
+                    android:text="Other User"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#ffffff"
+                    android:textSize="30sp"
+                    app:fontFamily="serif" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/headerView"
+        android:layout_above="@+id/messageField"
+        android:background="@drawable/layout_bg"
+        android:elevation="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginStart="-10dp"
+        android:layout_marginLeft="-10dp"
+        android:layout_marginRight="-10dp"
+        android:layout_marginEnd="-10dp"
+        android:gravity="bottom">
+
+
+
+        <ScrollView
+            android:id="@+id/scrollableContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/layout_bg"
+            android:elevation="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginStart="-10dp"
+            android:layout_marginLeft="-10dp"
+            android:layout_marginRight="-10dp"
+            android:layout_marginEnd="-10dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/dynamicResults"
+                        android:orientation="vertical"
+                        android:gravity="left"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        >
+
+                        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:paddingEnd="15dp"
+                            android:paddingLeft="60dp"
+                            android:paddingStart="60dp"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:clipToPadding="false">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:maxWidth="700dp"
+                                android:id="@+id/userMessageBody"
+                                android:background="@drawable/user_message"
+                                android:textColor="#fff"
+                                android:padding="10dp"
+                                android:elevation="2dp"
+                                android:textSize="18sp"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentEnd="true"
+                                android:text="Placeholder message, very long message, from ann arbor michigan - get it AA michigan is band"
+                                />
+                        </RelativeLayout>
+
+                        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="60dp"
+                            android:paddingEnd="60dp"
+                            android:paddingLeft="15dp"
+                            android:paddingStart="15dp"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:clipToPadding="false">
+                            <View
+                                android:id="@+id/avatar"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:scaleType="centerInside"
+                                android:background="@drawable/circle"
+                                android:layout_width="34dp"
+                                android:layout_height="34dp" />
+                            <TextView
+                                android:id="@+id/name"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginStart="15dp"
+                                android:layout_toRightOf="@+id/avatar"
+                                android:layout_toEndOf="@id/avatar"
+                                android:layout_alignTop="@+id/avatar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="4dp"
+                                android:text="Other User"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/message_body"
+                                android:layout_below="@+id/name"
+                                android:layout_alignLeft="@+id/name"
+                                android:layout_alignStart="@id/name"
+                                android:background="@drawable/other_message"
+                                android:padding="12dp"
+                                android:elevation="2dp"
+                                android:textSize="18sp"
+                                android:text="How are you doing? This is a long message that should probably wrap."
+                                />
+                        </RelativeLayout>
+
+
+
+
+
+                    </LinearLayout>
+
+
+
+            </RelativeLayout>
+
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/messageField">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#e0e0e0"
+            android:hint="Message Other User"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="60dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:textSize="18sp"
+            android:focusable="true"
+            android:clickable="true"
+            android:id="@+id/messageText"/>
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            app:srcCompat="@drawable/send"
+            android:layout_marginRight="30dp"
+            android:layout_marginEnd="30dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/send_button"
+            android:id="@+id/sendMessageButton"
+            android:paddingBottom="10dp"
+            />
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>
+
